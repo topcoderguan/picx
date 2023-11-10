@@ -89,5 +89,5 @@ onMounted(() => {
 </script>
 
 <style scoped lang="stylus">
-@import "./GithubImageTools-toolbox.styl"
+@import "./githubImageTools-toolbox.styl"
 </style>
