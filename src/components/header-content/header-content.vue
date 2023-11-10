@@ -3,9 +3,9 @@
     <div class="header-left">
       <div class="brand" @click="router.push('/')">
         <div class="logo">
-          <img src="../../assets/logo.png" alt="PicX" />
+          <img src="/logo.png" alt="GithubImageTools" />
         </div>
-        <div class="title">PicX</div>
+        <div class="title">Topcoder Github Image Tools</div>
       </div>
       <div class="website-count">
         <site-count :isuv="false" />
@@ -18,37 +18,26 @@
           {{ userConfigInfo.owner ? userConfigInfo.owner : $t('header.notLogin') }}
         </div>
 
-        <el-popover
-          placement="bottom-end"
-          trigger="click"
-          width="220rem"
-          :show-arrow="false"
-          :popper-style="{
-            padding: '0'
-          }"
-        >
+        <el-popover placement="bottom-end" trigger="click" width="220rem" :show-arrow="false" :popper-style="{
+          padding: '0'
+        }">
           <template #reference>
             <div class="avatar-box">
               <div class="avatar flex-center">
-                <img
-                  :src="userConfigInfo?.avatarUrl"
-                  v-if="userConfigInfo?.avatarUrl"
-                  :alt="userConfigInfo?.owner"
-                />
-                <el-icon class="user-filled-icon" v-else><IEpUserFilled /></el-icon>
+                <img :src="userConfigInfo?.avatarUrl" v-if="userConfigInfo?.avatarUrl" :alt="userConfigInfo?.owner" />
+                <el-icon class="user-filled-icon" v-else>
+                  <IEpUserFilled />
+                </el-icon>
               </div>
-              <el-icon class="caret-bottom-icon"><IEpCaretBottom /></el-icon>
+              <el-icon class="caret-bottom-icon">
+                <IEpCaretBottom />
+              </el-icon>
             </div>
           </template>
           <ul class="personal-center-popover">
             <li class="content-item">
               <span class="flex-center">{{ $t('header.language') }}</span>
-              <el-select
-                size="small"
-                style="width: 100rem"
-                v-model="userSettings.language"
-                @change="persistUserSettings"
-              >
+              <el-select size="small" style="width: 100rem" v-model="userSettings.language" @change="persistUserSettings">
                 <el-option label="中文简体" :value="LanguageEnum.zhCN"></el-option>
                 <el-option label="中文繁體" :value="LanguageEnum.zhTW"></el-option>
                 <el-option label="English" :value="LanguageEnum.en"></el-option>
@@ -57,24 +46,11 @@
             <el-divider style="margin: 5px 0" />
             <li class="content-item">
               <span class="flex-center">{{ $t('header.theme') }}</span>
-              <el-select
-                size="small"
-                style="width: 100rem"
-                v-model="userSettings.theme.mode"
-                @change="persistUserSettings"
-              >
-                <el-option
-                  :label="$t('settings.theme.system')"
-                  :value="ThemeModeEnum.system"
-                ></el-option>
-                <el-option
-                  :label="$t('settings.theme.light')"
-                  :value="ThemeModeEnum.light"
-                ></el-option>
-                <el-option
-                  :label="$t('settings.theme.dark')"
-                  :value="ThemeModeEnum.dark"
-                ></el-option>
+              <el-select size="small" style="width: 100rem" v-model="userSettings.theme.mode"
+                @change="persistUserSettings">
+                <el-option :label="$t('settings.theme.system')" :value="ThemeModeEnum.system"></el-option>
+                <el-option :label="$t('settings.theme.light')" :value="ThemeModeEnum.light"></el-option>
+                <el-option :label="$t('settings.theme.dark')" :value="ThemeModeEnum.dark"></el-option>
               </el-select>
             </li>
             <el-divider style="margin: 5px 0" />

@@ -65,13 +65,13 @@ export const initEmptyRepo = async (
   showTips: boolean = true
 ) => {
   const README = `
-# Welcome to use PicX
+# Welcome to use GithubImageTools
 
-[PicX](https://github.com/XPoet/picx) is a simple and powerful image hosting tool. It supports image hosting services via GitHub repository.
+[GithubImageTools](https://github.com/XPoet/GithubImageTools) is a simple and powerful image hosting tool. It supports image hosting services via GitHub repository.
 
-PicX is completely open source, and you can use it for free.
+GithubImageTools is completely open source, and you can use it for free.
 
-If you like it, please give it a star on [GitHub](https://github.com/XPoet/picx).
+If you like it, please give it a star on [GitHub](https://github.com/XPoet/GithubImageTools).
         `
   const { owner, selectedRepo: repo, selectedBranch: branch } = userConfigInfo
 
@@ -89,7 +89,7 @@ If you like it, please give it a star on [GitHub](https://github.com/XPoet/picx)
     url: `/repos/${owner}/${repo}/contents/README.md`,
     method: 'PUT',
     data: {
-      message: 'Init repo via PicX(https://github.com/XPoet/picx)',
+      message: 'Init repo via GithubImageTools(https://github.com/XPoet/GithubImageTools)',
       branch,
       content: window.btoa(README)
     },

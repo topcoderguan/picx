@@ -12,7 +12,7 @@ import { deepAssignObject, getLocal, getUuid } from '@/utils'
 import UserConfigInfoStateTypes from '@/stores/modules/user-config-info/types'
 import RootStateTypes from '@/stores/types'
 import UserSettingsStateTypes from '@/stores/modules/user-settings/types'
-import { LS_PICX_SETTINGS } from '@/common/constant'
+import { LS_GithubImageTools_SETTINGS } from '@/common/constant'
 
 const initSettings: UserSettingsModel = {
   imageName: {
@@ -74,7 +74,7 @@ const initSettings: UserSettingsModel = {
   starred: false,
   watermark: {
     enable: false,
-    text: 'PicX',
+    text: 'GithubImageTools',
     fontSize: 50,
     position: WatermarkPositionEnum.rightBottom,
     textColor: '#FFFFFF',
@@ -84,7 +84,7 @@ const initSettings: UserSettingsModel = {
 }
 
 const initUserSettings = (): UserSettingsModel => {
-  const LSSettings = getLocal(LS_PICX_SETTINGS)
+  const LSSettings = getLocal(LS_GithubImageTools_SETTINGS)
   if (LSSettings) {
     deepAssignObject(initSettings, LSSettings)
   }
@@ -195,7 +195,7 @@ const userSettingsModule: Module<UserSettingsStateTypes, RootStateTypes> = {
 
     // 持久化
     USER_SETTINGS_PERSIST({ state }) {
-      localStorage.setItem(LS_PICX_SETTINGS, JSON.stringify(state.userSettings))
+      localStorage.setItem(LS_GithubImageTools_SETTINGS, JSON.stringify(state.userSettings))
     },
 
     // 退出登录

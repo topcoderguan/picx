@@ -1,6 +1,6 @@
 import { Module } from 'vuex'
 import { UploadedImageModel } from '@/common/model'
-import { LS_PICX_MANAGEMENT } from '@/common/constant'
+import { LS_GithubImageTools_MANAGEMENT } from '@/common/constant'
 import DirImageListStateTypes, { DirObject } from './types'
 import RootStateTypes from '../../types'
 import {
@@ -11,7 +11,7 @@ import {
 import { getDirContent } from '@/views/imgs-management/imgs-management.util'
 
 const initDirObject = () => {
-  const dirObj = localStorage.getItem(LS_PICX_MANAGEMENT)
+  const dirObj = localStorage.getItem(LS_GithubImageTools_MANAGEMENT)
   return dirObj ? JSON.parse(dirObj) : createDirObject('/', '/')
 }
 
@@ -260,7 +260,7 @@ const dirImageListModule: Module<DirImageListStateTypes, RootStateTypes> = {
 
     // 图床管理 - 持久化存储
     DIR_IMAGE_LIST_PERSIST({ state }) {
-      localStorage.setItem(LS_PICX_MANAGEMENT, JSON.stringify(state.dirObject))
+      localStorage.setItem(LS_GithubImageTools_MANAGEMENT, JSON.stringify(state.dirObject))
     },
 
     // 图床管理 - 退出登录

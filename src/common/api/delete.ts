@@ -1,5 +1,5 @@
 import request from '@/utils/request'
-import { PICX_DEL_IMG_DESC } from '@/common/constant'
+import { GithubImageTools_DEL_IMG_DESC } from '@/common/constant'
 
 /**
  * 从 GitHub 中删除单张图片
@@ -16,7 +16,7 @@ export const deleteSingleImage = (owner: string, repo: string, path: string, sha
       owner,
       repo,
       path,
-      message: PICX_DEL_IMG_DESC,
+      message: GithubImageTools_DEL_IMG_DESC,
       sha
     }
   })

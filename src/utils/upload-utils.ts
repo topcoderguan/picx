@@ -8,7 +8,7 @@ import {
   uploadImageBlob,
   getBranchInfo
 } from '@/common/api'
-import { PICX_UPLOAD_IMG_DESC } from '@/common/constant'
+import { GithubImageTools_UPLOAD_IMG_DESC } from '@/common/constant'
 
 /**
  * 图片上传成功之后的处理
@@ -156,7 +156,7 @@ export function uploadImageToGitHub(
   const { selectedBranch: branch, email, owner } = userConfigInfo
 
   const data: any = {
-    message: PICX_UPLOAD_IMG_DESC,
+    message: GithubImageTools_UPLOAD_IMG_DESC,
     branch,
     content: (
       img.base64.compressBase64 ||

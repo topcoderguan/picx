@@ -34,7 +34,7 @@ import { onMounted, ref, shallowRef, watch } from 'vue'
 import { useRouter } from 'vue-router'
 import { ToolItemModel } from '@/common/model'
 import { store } from '@/stores'
-import { toolboxList } from './picx-toolbox.data'
+import { toolboxList } from './githubImageTools-toolbox.data'
 
 const ArrowRight = shallowRef(IEpArrowRight)
 
@@ -89,5 +89,5 @@ onMounted(() => {
 </script>
 
 <style scoped lang="stylus">
-@import "./picx-toolbox.styl"
+@import "./GithubImageTools-toolbox.styl"
 </style>

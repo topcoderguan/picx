@@ -1,13 +1,13 @@
 {
-  "name": "picx",
+  "name": "GithubImageTools",
   "version": "2.3.6",
   "private": false,
   "author": "XPoet <i@xpoet.cn>",
   "license": "AGPL-3.0",
   "bugs": {
-    "url": "https://github.com/XPoet/picx/issues"
+    "url": "https://github.com/XPoet/GithubImageTools/issues"
   },
-  "homepage": "https://github.com/XPoet/picx#readme",
+  "homepage": "https://github.com/XPoet/GithubImageTools#readme",
   "scripts": {
     "dev": "vite",
     "build": "vite build",

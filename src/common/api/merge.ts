@@ -1,5 +1,5 @@
 import request from '@/utils/request'
-import { PICX_UPLOAD_IMGS_DESC } from '@/common/constant'
+import { GithubImageTools_UPLOAD_IMGS_DESC } from '@/common/constant'
 
 /**
  * 创建 blobs 的 tree
@@ -38,7 +38,7 @@ export const createCommit = (owner: string, repo: string, tree: any, head: any) 
     params: {
       tree: tree.sha,
       parents: [head.commit.sha],
-      message: PICX_UPLOAD_IMGS_DESC
+      message: GithubImageTools_UPLOAD_IMGS_DESC
     }
   })
 }

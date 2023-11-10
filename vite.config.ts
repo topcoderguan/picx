@@ -34,7 +34,7 @@ export default ({ command, mode }: ConfigEnv): UserConfig => {
           imports: [path.resolve(__dirname, 'src/styles/variables.styl')],
           // 定义全局变量
           additionalData: `
-            $picx-primary-color = #4975c6
+            $GithubImageTools-primary-color = #4975c6
           `
         }
       }
@@ -44,7 +44,7 @@ export default ({ command, mode }: ConfigEnv): UserConfig => {
       exclude: ['@yireen/squoosh-browser']
     },
     server: {
-      port: 4000,
+      port: 4005,
       open: true,
       cors: true
     },
